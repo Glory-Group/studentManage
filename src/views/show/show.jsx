@@ -111,7 +111,7 @@ const show =props=> {
                 <div className="top">
                         <span className="title" >切换班级</span>
                         <span className="title" >1703C</span>
-                        <span className="title" >1703E</span>
+                        <span className="title" >1704E</span>
                         <span className="title" >1703E</span>
                         <span className="title" >创建班级+</span>
                         <p className="btn" >
