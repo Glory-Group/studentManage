@@ -6,8 +6,8 @@ const show =props=> {
     let [flag,setFlag]=useState(true)
     //柱状图显示隐藏
     function  changStyle(e){
-            let inSide=e.target
-            let outSide=e.target.parentNode
+            let inSide=e.target;
+            let outSide=e.target.parentNode;
              if(flag){
                 inSide.style="background:#efefef;left:0;"
                 outSide.style="background:#a7a5a6"
@@ -20,7 +20,9 @@ const show =props=> {
     }
 
     useEffect(()=>{
-        var myChart = echart.init(document.getElementById('con-line'));
+
+        const myChart = echart.init(document.getElementById('con-line'));
+
         myChart.setOption({
             title: {
                 text: '未来一周气温变化',
