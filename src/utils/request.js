@@ -1,10 +1,8 @@
 import axios from 'axios';
-import {AxiosResponse} from 'axios/index';
-//import {getToken} from "./saveToken";
-//import {message} from 'antd';
+
 
 const instance = axios.create({
-    baseURL: 'http://localhost:7001',
+    // baseURL: 'http://localhost:7001',
     timeout: 1000,
      //headers: {'authorization': getToken()}
 });
