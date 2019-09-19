@@ -1,10 +1,18 @@
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  box-sizing: border-box;
+@media screen and (min-width: 375px) {
+  :global .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  :global .header {
+    background-color: blue;
+    height: 100px;
+  }
 }
 
-.header {
-  height: 44px;
+@media screen and (max-width: 375px) {
+  :global .header {
+    background-color: pink;
+    height: 44px;
+  }
 }

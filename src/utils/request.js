@@ -1,30 +1,40 @@
-import fetch from 'dva/fetch';
+import axios from 'axios';
+import {AxiosResponse} from 'axios/index';
+//import {getToken} from "./saveToken";
+//import {message} from 'antd';
 
-function parseJSON(response) {
-  return response.json();
-}
+const instance = axios.create({
+    baseURL: 'http://localhost:7001',
+    timeout: 1000,
+     //headers: {'authorization': getToken()}
+});
 
-function checkStatus(response) {
-  if (response.status >= 200 && response.status < 300) {
-    return response;
+// 请求拦截器
+instance.interceptors.request.use( (config) =>{
+    // Do something before request is sent
+    return config;
+  }, (error)=> {
+    // Do something with request error
+    return Promise.reject(error);
   }
+);
+ 
+// 响应拦截器
+instance.interceptors.response.use( (response) =>{
+    // Do something with response data
+    if (response.status !== 200){
+      alert.error(response.statusText);
+    }
+    return response.data;
+  },  (error) =>{
+    // Do something with response error
+    if (error.response.status && error.response.status !== 200){
+      alert.error(error.response.statusText);
+    }else{
+      // message.error(error.response);
+    }
+    return Promise.resolve(error);
+  }
+);
 
-  const error = new Error(response.statusText);
-  error.response = response;
-  throw error;
-}
-
-/**
- * Requests a URL, returning a promise.
- *
- * @param  {string} url       The URL we want to request
- * @param  {object} [options] The options we want to pass to "fetch"
- * @return {object}           An object containing either "data" or "err"
- */
-export default function request(url, options) {
-  return fetch(url, options)
-    .then(checkStatus)
-    .then(parseJSON)
-    .then(data => ({ data }))
-    .catch(err => ({ err }));
-}
+export default instance;
