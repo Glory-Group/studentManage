@@ -1,9 +1,8 @@
 import React from 'react';
 import { Router, Route, Switch } from 'dva/router';
-
-import Login from "./views/login/login.jsx"
-import Score from "./views/score/score.jsx"
-import Show from "./views/show/show.jsx"
+import Login from "./views/login/login"
+import Score from "./views/score/score"
+import Show from "./views/show/show"
 import PresidentView from "./views/presidentView/presidentView"
 function RouterConfig({ history }) {
   return (

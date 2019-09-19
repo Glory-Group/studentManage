@@ -3,9 +3,8 @@ import "./scss/style.css";
 const Head =props=> {
         let {title,bgColor}=props
         return (         
-                <header className="header" style={{background:bgColor}}>
-                <span>{title}</span>
-                    
+                <header className="header">
+                <div className="header-content">{title}</div>                  
                 </header>           
         )
     
