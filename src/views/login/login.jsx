@@ -22,14 +22,16 @@ const Login = props => {
     function submit(e) {
         e.preventDefault();
         if (type === "login") {
-            console.log(username,"klllllll")
             let params={
                 username,password
             }
             props.handleLogin(params)
 
         } else if (type === "registry") {
-            alert(2)
+            let params={
+                username,password
+            }
+            props.handleRegistry(params)
         }
     }
     return (
@@ -62,6 +64,9 @@ const Login = props => {
 const mapDispatchToProps = (dispatch) => ({
     handleLogin: (params) => {
         return dispatch({ type: "login/handleLogin",params })
+    },
+    handleRegistry:(params)=>{
+        return dispatch({type:"login/handleRegistry",params})
     }
 })
 export default connect((state) => {
