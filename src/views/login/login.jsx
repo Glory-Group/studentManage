@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Head from "../../../components/head/head"
+import Head from "../../components/head/head"
 export class login extends Component {
     render() {
         return (
