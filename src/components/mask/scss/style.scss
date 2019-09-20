@@ -1,0 +1,61 @@
+:global{
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+    }
+    .mask-wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.5);     
+    }
+    .mask-container{
+        width: 40%;
+        height: auto;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column;
+    }
+    .mask-title{
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+    }
+    .mask-content{
+        height: auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 5px 12px;
+    }
+    .mask-btns{
+        height: 44px;
+        line-height: 44px;
+        text-align: right;
+        .btn{
+            display: inline-block;
+            margin: 0 5px;
+            padding: 0 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 36px;
+            line-height: 36px;
+        }
+        .sure-btn{
+            background: skyblue;
+            color: #fff;
+        }
+        .cancel-btn{
+            border: 1px solid #ccc;
+        }
+    }
+    
+}

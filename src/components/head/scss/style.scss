@@ -9,13 +9,15 @@
     .header{
         background-color: blue;
         height: 100px;
-        @extend %juzhong
+        @extend %juzhong;
+        color:#fff;
     }
   
 }
 
 @media screen and (max-width: 375px) {
     .header{
+      width: 100%;
       background-color: pink;
       height: 44px;
     }

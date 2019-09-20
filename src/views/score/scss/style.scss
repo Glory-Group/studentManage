@@ -1,0 +1,55 @@
+:global{
+    .score-wrap{
+        width: 100%;
+    }
+    .score-container{
+        width: 100%;
+    }
+    .score-top{
+        width: 85%;
+        height: 100px;
+        margin-top: 63px;
+        margin-left: 73px;
+        border:1px solid #ccc;
+        line-height: 100px;
+        display: flex;
+    }
+    .score-teacher{
+        margin-left: 15%;
+    }
+    .score-student{
+        margin-left: 15%;
+    }
+    .score-top-left{
+        flex:1;
+    }
+    .score-top-right{
+        flex:1;
+        display: flex;
+       justify-content:flex-end;
+       align-items: center;
+
+    }
+    .select-student{
+        width: 224px;
+        height: 40px;
+        margin-right: 5%;
+        
+        
+    }
+    .score-content{
+        width: 85%;
+        height: auto;
+        margin-top: 8px;
+        margin-left: 73px;
+        border:1px solid #ccc;
+    }
+    .edit-mask{
+        p{
+            margin: 5px;
+            b{
+                opacity: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+:global{
+    .table-head{
+        display: flex;
+        background-color: #ccc;
+        font-weight: bold;
+    }
+    .table-item{
+        display: flex;
+    }
+    .table-item-cell{
+        flex:1;
+        margin: 10px 0px;
+        display: inline-block;
+        text-align: center;
+
+    }
+}
