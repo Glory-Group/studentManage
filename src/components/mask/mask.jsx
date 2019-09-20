@@ -20,7 +20,6 @@ const Mask = props => {
 		</div>}
 
 	</div>
-
 	)
 }
 export default Mask
