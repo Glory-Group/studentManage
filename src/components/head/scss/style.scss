@@ -9,6 +9,8 @@
     .header{
         background-color: blue;
         height: 100px;
+        color: white;
+        font-size: 20px;
         @extend %juzhong
     }
   

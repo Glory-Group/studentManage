@@ -8,106 +8,83 @@
             box-sizing: border-box;
 
         }
-        .show{
+        %juzhong{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .view{
             width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
-            position: relative;
-            clear: both;
-            .scoreDialog{
-                position: fixed;
-                top:0;
-                bottom:0;
-                left: 0;
-                right: 0;
-                background: rgba(0,0,0,.5); 
-                //position: relative;
-                .mask{
-                    width: 70%;
-                    height: 30%;
-                    background: white;
-                    position: absolute;
-                    top:50%;
-                    left:50%;
-                    transform: translate(-50%,-50%);
-                    display: flex;
-                    flex-direction: column;
-                    .top{
-                        flex:2;
-                        display: flex;
-                        justify-content: space-around;
-                        span{
-                            display: flex;
-                            align-items: center;
-                        }
-                    }
-                    .mid{
-                        flex:6;
-                        display: flex;
-                        flex-direction: column;
-                        div{
-                            flex:1;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-                    .btm{
-                        flex:2;
-                    }
-                }
-            }
             .top{
                 width: 100%;
-                height: 37%;
+                height: 30%;
+                display: flex;
+                flex-direction: column;
                 .classList{
                     width: 95%;
-                    height: 40%;
+                    height: 50%;
                     margin: 10px auto;
                     border: 1px solid rgba(187, 187, 187, 1);
-                    padding:20px;
-                    position: relative;
                     display: flex;
-                    align-items: center;
-                    .title{
-                        width: 7%;
-                        height: 30%;
-                        color: rgba(16, 16, 16, 1);
-                        font-size: 12px;
-                        line-height: 30px;
-                        display: inline-block;
-                        text-align: center;
-                        border-radius: 4px;
-                        font-family: SourceHanSansSC-regular;
-                        margin: 0 1%;
-                        &:nth-of-type(2){
-                            background:rgba(24,144,255,1);
-                            color: white;
-                        }
-                        &:nth-of-type(3){
+                    flex-direction: column;
+                    .top-list{
+                        width: 100%;
+                        flex:1;
+                        display: flex;
+                        align-items: center;
+                        .title{
+                            width: 7%;
+                            height: 40%;
                             color:#a3d0fd;
-                            background:rgba(230,241,252,1);
-                            border:1px solid rgba(163,208,253,1)
-                        }
-                        &:nth-of-type(4){
-                            color:#a3d0fd;
-                            background:rgba(230,241,252,1);
-                            border:1px solid rgba(163,208,253,1)
-                        }
-                        &:nth-of-type(5){
-                            border:1px solid rgba(187,187,187,1)
+                            background:rgba(230,241,252,1); 
+                            border:1px solid rgba(163,208,253,1);
+                            font-size: 12px;
+                            line-height: 30px;
+                            display: inline-block;
+                            text-align: center;
+                            border-radius: 4px;
+                            font-family: SourceHanSansSC-regular;
+                            margin: 0 1%;
+                            &:nth-of-type(1){
+                              color: #000;
+                              background: white;
+                              border:none;
+                            }
                         }
                     }
-                }
-               
+                    .btm-list{
+                        flex:1;
+                        display: flex;
+                        justify-content: space-between;
+                         .nameList{
+                             display: flex;
+                             flex:1;
+                             label{
+                                width: 10%;
+                                height: 40%;
+                                 margin: 0 1%;
+                                 line-height: 30px;
+                                 text-align: center;
+                             }
+                            .title{
+                                width: 10%;
+                                height: 40%;
+                                font-size: 12px;
+                                line-height: 30px;
+                                display: inline-block;
+                                text-align: center;
+                                font-family: SourceHanSansSC-regular;
+                                margin: 0 1%;
+                            }
+                         }
                 .btn{
-                    width: 20%;
-                    height: 50%;
+                    width: 30%;
+                    height: 70%;
                     line-height: 25px;
-                    position: absolute;
-                    right:15px;
-                    top:20px;
+                   
                     .text{
                         display: inline-block;
                         font-size: 14px;
@@ -116,46 +93,26 @@
                     .outSide{
                         position: relative;
                         display: inline-block;
-                        width: 30%;
+                        width: 27%;
                         height: 30%;
                         border-radius: 10px;
                         background:rgba(86,119,252,.5);
                         .inSide{
                             position: absolute;
-                            top:-4px;
+                            top:-5px;
                             right:0;
-                            width: 45%;
-                            height: 130%;
+                            width: 35%;
+                            height: 180%;
                             display: block;
                             border-radius: 50%;
                             background:#5677fc;
                         }
                     }
                 }
-                .top-title{
-                    width: 95%;
-                    height: 10%;
-                    display: flex;
-                    line-height: 30px;
-                    margin: 0 auto;
-                    align-items: center;
-                    label{
-                      font-size: 12px;
-                      margin-left:1%;
                     }
-                    input{
-                        width: 20%;
-                        height: 100%;
-                        margin: 0 2%;
-                    }
-                    button{
-                        width: 10%;
-                        height: 100%;
-                        color:#a3d0fd;
-                        background:rgba(230,241,252,1);
-                        border:1px solid rgba(163,208,253,1)
-                    }
+                   
                 }
+              
             }
             .main{
                width: 100%;
@@ -163,46 +120,56 @@
                flex:1;
             .content{
                 width: 95%;
-                height: 70%;
-                margin: 10px- auto;
+                height: 700px;
+                margin: 10px auto;
                 flex:1;
                 display: flex;
                 flex-direction: column;
                 #con-line{
                     width: 100%;
-                    height: 100%;
+                    height: 70%;
                 }
                 .con-btm{
                     width: 100%;
-                    height: 40px;
+                    height: 80px;
                     display: flex;
-                    background: #f2f1f1;
+                    border:1px solid #5677fc;
                     .left{
-                        flex:1;
+                        flex:2;
                         display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        button{
-                            background: rgba(255,255,255,1);
-                            height: 25px;
-                            width: 30%;
-                            border-radius: 5px;
-                            border:1px solid  #ccc ;
-                        }
+                       flex-direction: column;
+                       span{
+                           flex:1;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                       }
                     }
                     .right{
-                        flex:1;
+                        flex:8;
                         display: flex;
-                        justify-content: flex-end;
+                        justify-content: center;
                         align-items: center;
-                        button{
-                            background: rgba(255,255,255,1);
-                            height:25px;
-                            width: 200px;
-                            border-radius: 5px;
-                            border:1px solid #ccc ;
-                            margin-right: 20px;
+                        textarea{
+                            width: 90%;
+                            height: 90%;
+                            border:none;
                         }
+                    }
+                }
+                .message{
+                    width: 100%;
+                    border:1px solid #ccc;
+                    .msg-item{
+                       width: 100%;
+                       height: 80px;
+                       display: flex;
+                       flex-direction: column;
+                       span{
+                           flex:1;
+                           display: flex;
+                           align-items: center;
+                       }
                     }
                 }
             }
@@ -223,7 +190,7 @@
             justify-content: center;
             align-items: center;
         }
-        .show{
+        .view{
             //transform:rotate(270deg);
             width: 100%;
             height: 100%;

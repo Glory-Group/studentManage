@@ -1,10 +1,10 @@
 import axios from 'axios';
-
+import {getToken} from "./saveToken";
 
 const instance = axios.create({
     // baseURL: 'http://localhost:7001',
     timeout: 1000,
-     //headers: {'authorization': getToken()}
+     headers: {'sessionid': getToken(),'tid':"50e270fe-5e8d-4ca3-bbfc-9e5d93118963","role":"3"}
 });
 
 // 请求拦截器
