@@ -1,31 +1,22 @@
 import React, { Component,useEffect,useState } from 'react'
 import Head from "../../components/head/head"
 import echart from "echarts"
+import Btn from "../../components/btn/index"
 import "./scss/index.css"
 
 const titleList=[{name:"1702D"},{name:"1703E"},{name:"1704B"},{name:"1609A"},{name:"1701A"},{name:"1606H"},{name:"1702F"}]
  const  presidentView =props=> {
-     //控制图表显示隐藏
-    let [flag,setFlag]=useState(true)
+   
     //班级列表
     let [title,setTitle]=useState([])
     //控制分析列表显示隐藏
     let [isShow,setIsShow]=useState(false)
-    //柱状图显示隐藏
-    function  changStyle(e){
-            let inSide=e.target;
-            let outSide=e.target.parentNode;
-             if(flag){
-                inSide.style="background:#efefef;left:0;"
-                outSide.style="background:#a7a5a6"
-                setFlag(false)
-             }else{
-                inSide.style="background:#5677fc;right:0;"
-                outSide.style="background:rgba(86,119,252,.5)"
-                setFlag(true)
-             }
+      //控制图表显示隐藏
+      let [flag,setFlag]=useState(true)
+   
+    function controlClick(type){
+        setFlag(type)
     }
-
     function showList(){
        setIsShow(!isShow)
     }
@@ -144,9 +135,8 @@ const titleList=[{name:"1702D"},{name:"1703E"},{name:"1704B"},{name:"1609A"},{na
                            </div>
                        <p className="btn" >
                         <span className="outSide" > 
-                            <span className="inSide" onClick={(e)=>{
-                                changStyle(e)
-                            }} ></span>
+                        <Btn visible={flag} controlClick={controlClick} ></Btn>
+                           
                         </span>
                         <span className="text" >柱形图/线图</span>
                         </p>

@@ -63,16 +63,16 @@
                 height: 37%;
                 .classList{
                     width: 95%;
-                    height: 40%;
+                    height: 30%;
                     margin: 10px auto;
                     border: 1px solid rgba(187, 187, 187, 1);
-                    padding:20px;
+                    padding:10px;
                     position: relative;
                     display: flex;
                     align-items: center;
                     .title{
                         width: 7%;
-                        height: 30%;
+                        height: 35%;
                         color: rgba(16, 16, 16, 1);
                         font-size: 12px;
                         line-height: 30px;
@@ -116,16 +116,16 @@
                     .outSide{
                         position: relative;
                         display: inline-block;
-                        width: 30%;
-                        height: 30%;
+                        width: 80px;
+                        height: 15px;
                         border-radius: 10px;
                         background:rgba(86,119,252,.5);
                         .inSide{
                             position: absolute;
                             top:-4px;
                             right:0;
-                            width: 45%;
-                            height: 130%;
+                            width: 25px;
+                            height: 25px;
                             display: block;
                             border-radius: 50%;
                             background:#5677fc;

@@ -87,17 +87,17 @@
   :global .view .top .classList .btm-list .btn .outSide {
     position: relative;
     display: inline-block;
-    width: 27%;
-    height: 30%;
+    width: 80px;
+    height: 15px;
     border-radius: 10px;
     background: rgba(86, 119, 252, 0.5);
   }
   :global .view .top .classList .btm-list .btn .outSide .inSide {
     position: absolute;
-    top: -5px;
+    top: -4px;
     right: 0;
-    width: 35%;
-    height: 180%;
+    width: 25px;
+    height: 25px;
     display: block;
     border-radius: 50%;
     background: #5677fc;

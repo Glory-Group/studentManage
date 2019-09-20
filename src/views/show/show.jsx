@@ -2,33 +2,26 @@ import React, { Component ,useEffect,useState} from 'react'
 import Head from "../../components/head/head"
 import {titleRequest,listRequest,showUserInfo} from "../../services/show"
 import echart from "echarts"
+import Btn from "../../components/btn/index"
 import {connect} from "dva"
 import "./scss/index.css"
 const show =props=> {
-     //柱状图显示隐藏
+
+    //柱状图显示隐藏
     let [flag,setFlag]=useState(true)
-    function  changStyle(e){
-            let inSide=e.target;
-            let outSide=e.target.parentNode;
-             if(flag){
-                inSide.style="background:#efefef;left:0;"
-                outSide.style="background:#a7a5a6"
-                setFlag(false)
-             }else{
-                inSide.style="background:#5677fc;right:0;"
-                outSide.style="background:rgba(86,119,252,.5)"
-                setFlag(true)
-             }
+   
+    function controlClick(type){
+        setFlag(type)
     }
+    
+	//控制添加成绩蒙层的显示隐藏
     let [scoreAlert,setSalert]=useState(false)
-   function addScore(){
+    function addScore(){
         setSalert(!scoreAlert)
-   }
+	 }
+	 
     useEffect(()=>{
-       
-
         const myChart = echart.init(document.getElementById('con-line'));
-
         myChart.setOption({
             title: {
                 text: '未来一周气温变化',
@@ -114,16 +107,6 @@ const show =props=> {
         })
     },[])
 
-    useEffect(async()=>{
-
-        async function Title(){
-            // const data =  await listRequest()
-            // const result = await titleRequest()
-            // const user= await showUserInfo()
-            // console.log(data,result,user)
-        }
-        Title()
-    },[])
         return (		
             <div className="show" >
                
@@ -137,9 +120,7 @@ const show =props=> {
                             <span className="title" >创建班级+</span>
                             <p className="btn" >
                             <span className="outSide" > 
-                                <span className="inSide" onClick={(e)=>{
-                                    changStyle(e)
-                                }} ></span>
+                             <Btn visible={flag} controlClick={controlClick} ></Btn>
                             </span>
                             <span className="text" >柱形图/线图</span>
                         </p>
@@ -172,7 +153,7 @@ const show =props=> {
 													</div>
 									  	</div>
                 </div>
-               <div className="scoreDialog"  >
+               <div className="scoreDialog" style={{display:scoreAlert?"block":"none"}} >
 								     <div className="mask">
 											   <div className="top">
 													 <span>新添成绩--XX同学</span><span>X</span>
