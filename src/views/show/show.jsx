@@ -19,14 +19,17 @@ const show =props=> {
                 outSide.style="background:rgba(86,119,252,.5)"
                 setFlag(true)
              }
-    }
+		}
+
+		//控制添加成绩蒙层显示隐藏
     let [scoreAlert,setSalert]=useState(false)
-   function addScore(){
-        setSalert(!scoreAlert)
-   }
+		function addScore(){
+					setSalert(!scoreAlert)
+		}
+	 
     useEffect(()=>{
        
-
+        //初始化echart
         const myChart = echart.init(document.getElementById('con-line'));
 
         myChart.setOption({
@@ -172,7 +175,7 @@ const show =props=> {
 													</div>
 									  	</div>
                 </div>
-               <div className="scoreDialog"  >
+               <div className="scoreDialog" style={{display:scoreAlert?"block":'none'}} >
 								     <div className="mask">
 											   <div className="top">
 													 <span>新添成绩--XX同学</span><span>X</span>
