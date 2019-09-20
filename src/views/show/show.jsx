@@ -28,7 +28,7 @@ const show =props=> {
 	 useEffect(()=>{
 		 setTitle(titleList)
 	 })
-	 
+
 	 //渲染图表
     useEffect(()=>{
 				const myChartList=[...document.querySelectorAll('.con-line')] 
@@ -72,7 +72,14 @@ const show =props=> {
 						<div className="content"  >
 								{
 									data.map((item,index)=>{
-										return 	<EchartItem key={index} ></EchartItem>
+										return 	<EchartItem key={index} >
+												<div className="left">
+													<button>添加成绩+</button><button>添加分析和解决方案+</button>
+									</div>
+									<div className="right">
+													<button>查看和编辑该生所有成绩</button>
+									</div>
+										</EchartItem>
 									})
 								}
 					  	</div>

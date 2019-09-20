@@ -4,8 +4,9 @@
     box-sizing: border-box;
   }
   :global .view {
-    width: 100%;
+    width: 80%;
     height: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
   }
@@ -109,46 +110,53 @@
   }
   :global .view .main .content {
     width: 95%;
-    height: 700px;
     margin: 10px auto;
     flex: 1;
     display: flex;
     flex-direction: column;
   }
-  :global .view .main .content #con-line {
+  :global .view .main .content .con-item {
     width: 100%;
-    height: 70%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
   }
-  :global .view .main .content .con-btm {
+  :global .view .main .content .con-item .con-line {
+    width: 100%;
+    height: 400px;
+  }
+  :global .view .main .content .con-item .con-btm {
     width: 100%;
     height: 80px;
     display: flex;
     border: 1px solid #5677fc;
   }
-  :global .view .main .content .con-btm .left {
+  :global .view .main .content .con-item .con-btm .left {
     flex: 2;
     display: flex;
     flex-direction: column;
   }
-  :global .view .main .content .con-btm .left span {
+  :global .view .main .content .con-item .con-btm .left span {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  :global .view .main .content .con-btm .right {
+  :global .view .main .content .con-item .con-btm .right {
     flex: 8;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  :global .view .main .content .con-btm .right textarea {
+  :global .view .main .content .con-item .con-btm .right textarea {
     width: 90%;
     height: 90%;
     border: none;
   }
   :global .view .main .content .message {
     width: 100%;
+    display: flex;
     border: 1px solid #ccc;
   }
   :global .view .main .content .message .msg-item {
