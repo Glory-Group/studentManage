@@ -1,55 +1,122 @@
 :global{
+	*{
+		padding: 0;
+		margin: 0;
+		list-style:none;
+		box-sizing:border-box;
+		outline: none;
+	}
+  @media screen and (min-width:375px){ 
     .score-wrap{
-        width: 100%;
+			width: 100%;
     }
     .score-container{
-        width: 100%;
+			width: 100%;
     }
     .score-top{
-        width: 85%;
-        height: 100px;
-        margin-top: 63px;
-        margin-left: 73px;
-        border:1px solid #ccc;
-        line-height: 100px;
-        display: flex;
+			width: 85%;
+			height: 100px;
+			margin-top: 63px;
+			margin-left: 73px;
+			border:1px solid #ccc;
+			line-height: 100px;
+			display: flex;
     }
     .score-teacher{
-        margin-left: 15%;
+			margin-left: 15%;
     }
     .score-student{
-        margin-left: 15%;
+			margin-left: 15%;
     }
     .score-top-left{
-        flex:1;
+			flex:1;
     }
     .score-top-right{
-        flex:1;
-        display: flex;
-       justify-content:flex-end;
-       align-items: center;
-
+      flex:1;
+      display: flex;
+      justify-content:flex-end;
+      align-items: center;
     }
     .select-student{
-        width: 224px;
-        height: 40px;
-        margin-right: 5%;
-        
-        
+			width: 224px;
+			height: 40px;
+			margin-right: 5%;       
     }
     .score-content{
-        width: 85%;
-        height: auto;
-        margin-top: 8px;
-        margin-left: 73px;
-        border:1px solid #ccc;
+			width: 85%;
+			height: auto;
+			margin-top: 8px;
+			margin-left: 73px;
+			border:1px solid #ccc;
     }
     .edit-mask{
-        p{
-            margin: 5px;
-            b{
-                opacity: 0;
-            }
-        }
+			p{
+				margin: 5px;
+				b{
+					opacity: 0;
+				}
+			}
     }
+	}
+	@media screen and (max-width:375px){
+		html{
+      font-size: calc(100/375*100vw)
+    }
+    body,#root,html{
+      width: 100%;
+      height: 100%;
+    } 
+		.score-wrap{
+			width: 100%;
+			height: 100%;
+			font-size:14px;
+    }
+    .score-container{
+			width: 100%;
+    }
+    .score-top{
+			width: 94%;
+			height: .6rem;
+			margin-top: 5%;
+			margin-left: 3%;
+			border:1px solid #f00;
+			line-height: .6rem;
+			display: flex;
+    }
+    .score-teacher{
+			margin-left: .1rem;
+    }
+    .score-student{
+			margin-left: .1rem;
+    }
+    .score-top-left{
+			flex:1;
+    }
+    .score-top-right{
+      flex:1;
+      display: flex;
+      justify-content:flex-end;
+      align-items: center;
+    }
+    .select-student{
+			width:2.4rem;
+			height: .4rem;
+			margin-right: 5%;       
+    }
+    .score-content{
+			width: 94%;
+			height: auto;
+			margin-top: .08rem;
+			margin-left: 3%;
+			border:1px solid #ccc;
+    }
+    .edit-mask{
+			p{
+				margin: 5px;
+				b{
+					opacity: 0;
+				}
+			}
+    }
+	}
 }
