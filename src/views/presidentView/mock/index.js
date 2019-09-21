@@ -3,7 +3,7 @@ import Mock from "mockjs"
 
 const data= [{
     title: {
-        text: '小明同学的日周考成绩统计图',
+        text: '小明日周考成绩',
         subtext: '仅供参考'
     },
     tooltip: {
@@ -85,7 +85,7 @@ const data= [{
     ]
 },{
     title: {
-        text: '小红同学的日周考成绩统计图',
+        text: '小红日周考成绩',
         subtext: '仅供参考'
     },
     tooltip: {
@@ -167,7 +167,7 @@ const data= [{
     ]
 },{
     title: {
-        text: '小芳同学的日周考成绩统计图',
+        text: '小芳日周考成绩',
         subtext: '仅供参考'
     },
     tooltip: {

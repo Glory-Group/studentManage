@@ -29,6 +29,9 @@ const titleList=[{name:"1702D"},{name:"1703E"},{name:"1704B"},{name:"1609A"},{na
         const myChartList=[...document.querySelectorAll('.con-line')] 
        myChartList.forEach((item,index)=>{
             let myChart=echart.init(item)
+            window.addEventListener("resize", () => { 
+                myChart.resize()
+            });
             myChart.setOption(data[index])
         })
 
@@ -40,12 +43,12 @@ const titleList=[{name:"1702D"},{name:"1703E"},{name:"1704B"},{name:"1609A"},{na
                     <Head title="重点关注学生考试成绩统计图" bgColor="#0076FF 100%" ></Head>
                   <div className="classList">
                       <div className="top-list">
-															<span className="title" >选择班级</span>
-															{
-																	title.map((item,index)=>{
-																			return <span className="title" key={index} >{item.name}</span>
-																	})
-															}
+								<span className="title" >选择班级</span>
+								{
+										title.map((item,index)=>{
+												return <span className="title" key={index} >{item.name}</span>
+										})
+								}
                       </div>
                      
                       <div className="btm-list">
@@ -57,10 +60,10 @@ const titleList=[{name:"1702D"},{name:"1703E"},{name:"1704B"},{name:"1609A"},{na
                                <div className="title">（3/人）</div>
                            </div>
                        <p className="btn" >
-													<span className="outSide" > 
-													<Btn visible={flag} controlClick={controlClick} ></Btn>   
-													</span>
-													<span className="text" >柱形图/线图</span>
+								<span className="outSide" > 
+								<Btn visible={flag} controlClick={controlClick} ></Btn>   
+								</span>
+								<span className="text" >柱形图/线图</span>
                         </p>
                       </div>
                         
@@ -70,23 +73,23 @@ const titleList=[{name:"1702D"},{name:"1703E"},{name:"1704B"},{name:"1609A"},{na
             <div className="content"  >
              
               {
-									data.map((item,index)=>{
-										return 	<EchartItem key={index} >
-                                   <div className="left">
-																			<span>2019-08-30</span>
-																			<span>今日分析及解决方案</span>
-																			<span onClick={()=>{
-																					showList()
-																			}}  >点击查看历史纪录</span>
-																	</div>
-																	<div className="right">
-																			<textarea name="" id="" cols="30" rows="10"></textarea>
-																	</div>
+				data.map((item,index)=>{
+					return 	<EchartItem key={index} >
+                                <div className="left-view">
+					            	<span>2019-08-30</span>
+					            	<span>今日分析及解决方案</span>
+					            	<span onClick={()=>{
+					            			showList()
+					            	}}  >点击查看历史纪录</span>
+				                </div>
+			                	<div className="right-view">
+			                			<textarea name="" id=""></textarea>
+			                	</div>
                             </EchartItem>
-									})
-			          }
+				})
+			  }
             
-							<div className="message" style={{display:isShow?"block":"none"}} >
+			 <div className="message" style={{display:isShow?"block":"none"}} >
                    <div className="msg-item">
                        <span>2019-09-20</span>
                        <span>aa</span>

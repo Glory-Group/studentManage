@@ -179,9 +179,6 @@
         
     }
     @media screen and (max-width:375px){
-        html,body,#root{
-           
-        }
         html{
             font-size: calc(100/375*100vw);
         }
@@ -191,31 +188,29 @@
             align-items: center;
         }
         .show{
-            //transform:rotate(270deg);
+            
             width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
             font-size: 15px;
-            //transform:rotate(270deg);
             .top{
                 width: 100%;
-                height: 20%;
+                height: 25%;
                 .classList{
                     width: 95%;
                     height: 40%;
                     margin: 10px auto;
                     border: 1px solid rgba(187, 187, 187, 1);
-                    padding:20px;
+                    padding:2px;
                     position: relative;
                     display: flex;
                     align-items: center;
                     .title{
-                        width: 7%;
-                        height: 30%;
+                        width: 0.5rem;
+                        height: 0.3rem;
                         color: rgba(16, 16, 16, 1);
-                        font-size: 12px;
-                        line-height: 30px;
+                        font-size: 11px;
                         display: inline-block;
                         text-align: center;
                         border-radius: 4px;
@@ -243,29 +238,26 @@
                
                 .btn{
                     width: 20%;
-                    height: 50%;
-                    line-height: 25px;
+                    height: 25px;
                     position: absolute;
-                    right:15px;
-                    top:20px;
+                    right:0;
+                    top:0;
                     .text{
-                        display: inline-block;
-                        font-size: 14px;
-                        margin: 0 3px;
+                        font-size: 11px;
+                        width: 100%;
                     }
                     .outSide{
                         position: relative;
-                        display: inline-block;
-                        width: 30%;
-                        height: 30%;
+                        width: 0.5rem;
+                        height: 0.1rem;
                         border-radius: 10px;
                         background:rgba(86,119,252,.5);
                         .inSide{
                             position: absolute;
-                            top:-4px;
+                            top:-5px;
                             right:0;
-                            width: 45%;
-                            height: 130%;
+                            width: 0.2rem;
+                            height:0.2rem;
                             display: block;
                             border-radius: 50%;
                             background:#5677fc;
@@ -274,9 +266,8 @@
                 }
                 .top-title{
                     width: 95%;
-                    height: 10%;
+                    height:0.4rem;
                     display: flex;
-                    line-height: 30px;
                     margin: 0 auto;
                     align-items: center;
                     label{
@@ -284,16 +275,16 @@
                       margin-left:1%;
                     }
                     input{
-                        width: 20%;
-                        height: 100%;
-                        margin: 0 2%;
+                        width: 0.6rem;
+                        height: 60%;
+                        margin: 0 5px;
                     }
                     button{
-                        width: 10%;
-                        height: 100%;
+                        width: 20%;
+                        height: 60%;
                         color:#a3d0fd;
                         background:rgba(230,241,252,1);
-                        border:1px solid rgba(163,208,253,1)
+                        border:1px solid rgba(163,208,253,1);
                     }
                 }
             }
@@ -302,53 +293,57 @@
                 overflow: scroll;
                 flex:1;
              .content{
-                 width: 95%;
-                 height: 70%;
-                 margin: 10px- auto;
                  flex:1;
+                 width: 95%;
                  display: flex;
+                 margin: 10px auto;
                  flex-direction: column;
-                 #con-line{
-                     width: 90%;
-                     height: 10%;
-                 }
-                 .con-btm{
+                 .con-item{
                      width: 100%;
-                     height: 40px;
+                     height: 300px;
                      display: flex;
-                     background: #f2f1f1;
-                     .left{
-                         flex:1;
-                         display: flex;
-                         justify-content: space-around;
-                         align-items: center;
-                         button{
-                             background: rgba(255,255,255,1);
-                             height: 25px;
-                             width: 30%;
-                             border-radius: 5px;
-                             border:1px solid  #ccc ;
-                         }
-                     }
-                     .right{
-                         flex:1;
-                         display: flex;
-                         justify-content: flex-end;
-                         align-items: center;
-                         button{
-                             background: rgba(255,255,255,1);
-                             height:25px;
-                             width: 200px;
-                             border-radius: 5px;
-                             border:1px solid #ccc ;
-                             margin-right: 20px;
-                         }
-                     }
+                     flex-direction: column;
+                     .con-line{
+                        width: 100%;
+                        height: 2.6rem;
+                        font-size: 14px;
+                    }
+                    .con-btm{
+                        width: 100%;
+                        height: 0.8rem;
+                        display: flex;
+                        background: #f2f1f1;
+                        flex-direction: column;
+                        .left{
+                            height: 0.6rem;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            button{
+                                background: rgba(255,255,255,1);
+                                width: 40%;
+                                border-radius: 5px;
+                                border:1px solid  #ccc ;
+                            }
+                        }
+                        .right{
+                            height: 0.6rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            button{
+                                background: rgba(255,255,255,1);
+                                height:25px;
+                                width: 200px;
+                                border-radius: 5px;
+                                border:1px solid #ccc ;
+                            }
+                        }
+                    }
                  }
-             }
-         }
+              }
+           }
         }
-
     }
 }
 
