@@ -4,11 +4,16 @@ import mockjs from "mockjs"
 import "./scss/style.css"
 import Table from "../../components/table/table"
 import Mask from "@/components/mask/mask"
+import Select from "@/components/select/select"
 export class score extends Component {
   state = {
     visible: false,
     type: '',//保存点击按钮的类型 编辑/删除
-    title:"",
+    title: "",
+    options:[
+      "学生一","学生二","学生三","学生四","学生五"
+    ],
+    selectTitle:"快捷选择其他学生",
     data: mockjs.mock({
       'list|10': [
         {
@@ -18,7 +23,6 @@ export class score extends Component {
           technique: "88",
           analysis: "@cword(8)",
           weekExam: '是'
-          
         }
       ]
     }),
@@ -64,14 +68,14 @@ export class score extends Component {
     this.setState({
       visible: true,
       type: "edit",
-      title:"编辑内容"
+      title: "编辑内容"
     })
   }
   delete = (text) => {
     this.setState({
       visible: true,
       type: "delete",
-      title:"删除内容"
+      title: "删除内容"
     })
   }
   handleOk = () => {
@@ -84,8 +88,13 @@ export class score extends Component {
       visible: false
     })
   }
+  chooseTitle=(title)=>{
+    this.setState({
+      selectTitle:title
+    })
+  }
   render() {
-    let { data, columns, visible ,title,type} = this.state
+    let { data, columns, visible, title, type ,options,selectTitle} = this.state
     return (
       <div className="score-wrap">
         <Head title="XX学生日周考试成绩统计表"></Head>
@@ -100,11 +109,7 @@ export class score extends Component {
                </span>
             </div>
             <div className="score-top-right">
-              <select name="" id=" " className="select-student">
-                <option value="">
-                  快捷选择其他学生
-              </option>
-              </select>
+              <Select options={options} selectTitle={selectTitle} chooseTitle={this.chooseTitle}></Select>
             </div>
           </div>
           <div className="score-content">
@@ -117,14 +122,14 @@ export class score extends Component {
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
-        {type==="edit"?
-        <div className="edit-mask">
-        <p>理论<b>解决方案</b> <input type="text" placeholder="0-100之间的数字"/> </p>
-        <p>技能<b>解决方案</b> <input type="text" placeholder="0-100之间的数字"/> </p>
-        <p>分析解决方案 <textarea name="" id="" cols="30" rows="10"></textarea> </p>
-        </div>
-        :<p>你确定删除吗</p>}
-          
+          {type === "edit" ?
+            <div className="edit-mask">
+              <p>理论<b>解决方案</b> <input type="text" placeholder="0-100之间的数字" /> </p>
+              <p>技能<b>解决方案</b> <input type="text" placeholder="0-100之间的数字" /> </p>
+              <p>分析解决方案 <textarea name="" id="" cols="30" rows="10"></textarea> </p>
+            </div>
+            : <p>你确定删除吗</p>}
+
         </Mask>
       </div>
     )
