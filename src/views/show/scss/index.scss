@@ -9,70 +9,29 @@
 
         }
         .show{
-            width: 100%;
+            width: 70%;
             height: 100%;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             position: relative;
             clear: both;
-            .scoreDialog{
-                position: fixed;
-                top:0;
-                bottom:0;
-                left: 0;
-                right: 0;
-                background: rgba(0,0,0,.5); 
-                //position: relative;
-                .mask{
-                    width: 70%;
-                    height: 30%;
-                    background: white;
-                    position: absolute;
-                    top:50%;
-                    left:50%;
-                    transform: translate(-50%,-50%);
-                    display: flex;
-                    flex-direction: column;
-                    .top{
-                        flex:2;
-                        display: flex;
-                        justify-content: space-around;
-                        span{
-                            display: flex;
-                            align-items: center;
-                        }
-                    }
-                    .mid{
-                        flex:6;
-                        display: flex;
-                        flex-direction: column;
-                        div{
-                            flex:1;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-                    .btm{
-                        flex:2;
-                    }
-                }
-            }
+           
             .top{
                 width: 100%;
-                height: 37%;
+                height: 35%;
                 .classList{
                     width: 95%;
-                    height: 40%;
-                    margin: 10px auto;
+                    height: 30%;
+                    margin: 30px auto;
                     border: 1px solid rgba(187, 187, 187, 1);
-                    padding:20px;
+                    padding:10px;
                     position: relative;
                     display: flex;
                     align-items: center;
                     .title{
                         width: 7%;
-                        height: 30%;
+                        height: 35%;
                         color: rgba(16, 16, 16, 1);
                         font-size: 12px;
                         line-height: 30px;
@@ -116,16 +75,16 @@
                     .outSide{
                         position: relative;
                         display: inline-block;
-                        width: 30%;
-                        height: 30%;
+                        width: 80px;
+                        height: 15px;
                         border-radius: 10px;
                         background:rgba(86,119,252,.5);
                         .inSide{
                             position: absolute;
                             top:-4px;
                             right:0;
-                            width: 45%;
-                            height: 130%;
+                            width: 25px;
+                            height: 25px;
                             display: block;
                             border-radius: 50%;
                             background:#5677fc;
@@ -163,48 +122,56 @@
                flex:1;
             .content{
                 width: 95%;
-                height: 70%;
-                margin: 10px- auto;
+                margin: 10px auto;
                 flex:1;
                 display: flex;
                 flex-direction: column;
-                #con-line{
+                .con-item{
                     width: 100%;
-                    height: 100%;
-                }
-                .con-btm{
-                    width: 100%;
-                    height: 40px;
+                    height: 400px;
                     display: flex;
-                    background: #f2f1f1;
-                    .left{
-                        flex:1;
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        button{
-                            background: rgba(255,255,255,1);
-                            height: 25px;
-                            width: 30%;
-                            border-radius: 5px;
-                            border:1px solid  #ccc ;
-                        }
+                    flex-direction: column;
+                    margin: 20px 0;
+                    .con-line{
+                        width: 100%;
+                        height: 400px;
                     }
-                    .right{
-                        flex:1;
+                    .con-btm{
+                        width: 100%;
+                        height: 40px;
                         display: flex;
-                        justify-content: flex-end;
-                        align-items: center;
-                        button{
-                            background: rgba(255,255,255,1);
-                            height:25px;
-                            width: 200px;
-                            border-radius: 5px;
-                            border:1px solid #ccc ;
-                            margin-right: 20px;
+                        background: #f2f1f1;
+                        .left{
+                            flex:1;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            button{
+                                background: rgba(255,255,255,1);
+                                height: 25px;
+                                width: 30%;
+                                border-radius: 5px;
+                                border:1px solid  #ccc ;
+                            }
+                        }
+                        .right{
+                            flex:1;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            button{
+                                background: rgba(255,255,255,1);
+                                height:25px;
+                                width: 200px;
+                                border-radius: 5px;
+                                border:1px solid #ccc ;
+                                margin-right: 20px;
+                            }
                         }
                     }
                 }
+               
+                
             }
         }
         }
