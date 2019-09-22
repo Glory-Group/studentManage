@@ -1,19 +1,13 @@
-
-
-
 const data= [{
     title: {
-        text: '小明日周考成绩',
+        text: '张立日周考成绩',
         subtext: '仅供参考'
     },
     tooltip: {
         trigger: 'axis'
     },
     legend: {
-        data:['技能','理论'],
-        "textStyle": {
-            "fontSize": 13
-        }
+        data:['技能','理论']
     },
     toolbox: {
         show: true,
@@ -88,7 +82,7 @@ const data= [{
     ]
 },{
     title: {
-        text: '小红日周考成绩',
+        text: '张三日周考成绩',
         subtext: '仅供参考'
     },
     tooltip: {
@@ -170,7 +164,7 @@ const data= [{
     ]
 },{
     title: {
-        text: '小芳日周考成绩',
+        text: '王强日周考成绩',
         subtext: '仅供参考'
     },
     tooltip: {

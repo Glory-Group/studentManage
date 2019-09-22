@@ -26,7 +26,8 @@ const titleList=[{name:"1702D"},{name:"1703E"},{name:"1704B"},{name:"1609A"},{na
      //渲染图表
      useEffect(()=>{
         setTitle(titleList)
-        const myChartList=[...document.querySelectorAll('.con-line')] 
+        const myChartList=[...document.querySelectorAll('.view-line')] 
+        console.log(myChartList)
        myChartList.forEach((item,index)=>{
             let myChart=echart.init(item)
             window.addEventListener("resize", () => { 

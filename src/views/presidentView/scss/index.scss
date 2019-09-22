@@ -1,12 +1,11 @@
 
 :global{
     
-    @media screen and (min-width: 375px) {
+    @media screen and ( min-width: 375px ) {
 
         *{
             outline: none;
             box-sizing: border-box;
-
         }
         %juzhong{
             display: flex;
@@ -187,10 +186,9 @@
        
      }
     }
-       
-        
-    }
-    @media screen and (max-width:375px){
+ }
+
+    @media screen and ( max-width:375px ){
         
         html{
             font-size: calc(100/375*100vw);
@@ -294,9 +292,10 @@
                         }
                     }
                 }
-                    }
+            }
                    
-                }
+        }
+    }
             .main{
                 width: 100%;
                 overflow: scroll;
@@ -307,18 +306,20 @@
                  display: flex;
                  margin: 10px auto;
                  flex-direction: column;
-                 .con-item{
+                 .view-item{
                      width: 100%;
-                     height: 400px;
+                     height: 3.6rem;
                      display: flex;
+                   
                      flex-direction: column;
-                     .con-line{
-                        width: 100%;
-                        height: 300px;
+                     overflow-x: scroll;
+                     .view-line{
+                        width: 5rem !important ;
+                        height: 2.6rem;
                     }
-                .con-btm{
-                    width: 100%;
-                    height: 80px;
+                .view-btm{
+                    width: 5rem;
+                    height: 0.6rem;
                     display: flex;
                     border:1px solid #5677fc;
                    .left-view{
@@ -348,8 +349,7 @@
                  }
               }
            }
-        }
-
-    }
-}
+        
+      }
+   }
 }
